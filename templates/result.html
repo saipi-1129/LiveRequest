@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>リクエスト結果</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container result-container">
+        <div class="result-card">
+            <div class="status-code">
+                <div class="code-badge {% if code == 200 %}success{% else %}error{% endif %}">
+                    {{ code }}
+                </div>
+            </div>
+            
+            {% if code == 200 %}
+            <div class="result-message success">
+                <i class="fas fa-check-circle pulse"></i>
+                <h2>リクエスト成功</h2>
+                <p>操作は正常に完了しました</p>
+            </div>
+            {% else %}
+            <div class="result-message error">
+                <i class="fas fa-exclamation-triangle pulse"></i>
+                <h2>リクエスト失敗</h2>
+                <p>エラーが発生しました</p>
+            </div>
+            {% endif %}
+            
+            <div class="action-button">
+                <a href="/" class="btn btn-back">
+                    <i class="fas fa-home"></i> トップページに戻る
+                </a>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2025 配信リクエストシステム</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+/* ダークモード基本スタイル */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, 'MS Pゴシック', sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+h1 {
+    color: #81d4fa;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+/* ステータスコード表示用 */
+h1:first-of-type {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+/* Topに戻るリンク用 */
+h1:last-of-type {
+    margin-top: 30px;
+    border-top: 2px solid #0288d1;
+    padding-top: 20px;
+}
+
+p {
+    font-size: 1.5em;
+    margin: 20px 0;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* 成功メッセージ */
+.success {
+    background-color: #1b5e20;
+    color: #a5d6a7;
+    border: 1px solid #2e7d32;
+}
+
+/* エラーメッセージ */
+.error {
+    background-color: #b71c1c;
+    color: #ef9a9a;
+    border: 1px solid #c62828;
+}
+
+a {
+    color: #64b5f6;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 1.2em;
+}
+
+a:hover {
+    color: #90caf9;
+    text-decoration: underline;
+}
+
+/* レスポンシブデザイン */
+@media screen and (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+    
+    h1:first-of-type {
+        font-size: 2.5em;
+    }
+    
+    p {
+        font-size: 1.2em;
+        padding: 10px 20px;
+    }
+}
